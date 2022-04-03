@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  height: 50px;
+  background: #343a40;
+  display: flex;
+  &-link {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+}
+
+.wrapper{
+  max-width: 1350px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  .filter-side {
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    color: #29434e;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    background: #819ca9;
+    box-shadow: 0px 20px 50px rgb(44 85 146 / 10%);
+
+    &_title {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .filter-title {
+      margin-bottom: 10px;
+    }
+
+    .input , .select {
+      width: 100%;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .input {
+      width: 100px;
+      margin-right: 10px;
+    }
+
+    .select {
+      background: #fff;
+    }
+
+    .btn {
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .filter {
+      padding: 5px;
+      margin-top: 10px;
+    }
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      max-width: 350px;
+      width: 100%;
+      padding: 16px;
+      margin: 20px auto;
+      color: #222222;
+      background-color: #ffffff;
+      border: 1px solid #ebebeb;
+      box-shadow: 0px 20px 50px rgb(44 85 146 / 10%);
+      border-radius: 20px;
+      text-align: center;
+      &__title {
+      }
+      &__image {
+        max-width: 150px;
+        height: 150px;
+        margin: 20px 0;
+      }
+      &__price {
+        margin: 20px 0;
+      }
+      &:hover{
+        transition: all .3s ease;
+        animation: pulse .5s;
+        cursor: pointer;
+      }
+    }
+  }
+  .pagination {
+    margin: 20px;
+    &-item {
+      border: 1px solid black;
+      margin-right: 3px;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      &.active{
+        color: red;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.95);
+    border: 1px solid black;
+  }
+  100% {
+    transform: scale(1);
+    border: 1px solid #ebebeb;
+  }
+}
+
